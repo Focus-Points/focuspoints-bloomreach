@@ -1,0 +1,61 @@
+/* !HELPER TOOL GUI */
+/*-----------------------------------------*/
+.focuspoint-container .info {
+    width:320px;
+}
+.focuspoint-container .info .focuspoint-container .helper-tool h1 {
+    font-size:14px;
+}
+.focuspoint-container .info .focuspoint-container .helper-tool p {
+    font-size: 0.825rem;
+    padding:0;
+    margin:0 0 1em;
+}
+.focuspoint-container .helper-tool, .focuspoint-container .helper-tool * {
+    box-sizing:border-box;
+}
+.focuspoint-container .helper-tool {
+    padding:12px;
+    border:1px solid #fcfcfc;
+}
+.focuspoint-container .helper-tool input {
+    position:relative;
+    width:100%;
+}
+/* !HELPER TOOL TARGETING SYSTEM */
+.focuspoint-container  .focuspoint img {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+}
+/* !HELPER TOOL TARGETING SYSTEM */
+.focuspoint-container .helper-tool-target {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  margin-bottom:1em;
+}
+.focuspoint-container .helper-tool-target img {
+  display: block;
+  max-width: 100%;
+  height:auto;
+}
+.focuspoint-container .helper-tool-target .target-overlay, .focuspoint-container .helper-tool-target .reticle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.focuspoint-container .helper-tool-target .target-overlay {
+  cursor:pointer;
+  opacity: 0.01;
+}
+.focuspoint-container .helper-tool-target .reticle {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top:50%;
+  left:50%;
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+}

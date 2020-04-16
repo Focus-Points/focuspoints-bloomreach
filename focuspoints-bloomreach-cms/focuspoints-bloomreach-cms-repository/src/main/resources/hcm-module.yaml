@@ -1,0 +1,6 @@
+group:
+  name: focuspoints
+  after: hippo-cms
+project:
+  name: focuspoints
+module: focuspoints

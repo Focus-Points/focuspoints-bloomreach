@@ -1,0 +1,47 @@
+.imageset-override-styles .imageset-extension-focuspoint {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.imageset-override-styles .imageset-extension-focuspoint .resource-values {
+    position: relative;
+}
+
+
+.focuspoint-button {
+    display: block;
+    width: 124px;
+    height: 26px;
+    padding: 6px 0 0 30px;
+}
+
+.focuspoint-button {
+    background: url("res/button_focuspoint.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    color: #333333;
+}
+
+.focuspoint-button:hover {
+    background: url("res/button_focuspoint_hover.png") no-repeat scroll 0 0 transparent;
+}
+
+
+.focuspoint-container {
+    display: none;
+    position: absolute;
+    top: 57px;
+    left: 15px;
+    background: #fff;
+    border: #999;
+    width: 80%;
+    height: 0;
+    padding-bottom: 45%;
+    z-index: 99;
+}
+
+.focuspoint-container .reticle {
+    display: block;
+    background: url("focuspoint/files/focuspoint-target.png");
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,12 @@
+<'focuspoints'='http://www.onehippo.org/focuspoints/nt/1.0'>
+<'hippo'='http://www.onehippo.org/jcr/hippo/nt/2.0.4'>
+<'hippostd'='http://www.onehippo.org/jcr/hippostd/nt/2.0'>
+<'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
+<'hippogallery'='http://www.onehippo.org/jcr/hippogallery/nt/2.0'>
+
+[focuspoints:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
+  orderable
+
+[focuspoints:focuspointimageset] > hippogallery:imageset, hippogallery:relaxed
+  orderable
+

@@ -1,0 +1,20 @@
+
+### Intellij ###
+.idea/
+*.iml
+
+### Maven ###
+target/
+
+### Repository ###
+/data/
+
+### auto generated essentails files ###
+/essentials/overlays
+
+
+### Eclipse ###
+**/.settings
+**/.classpath
+**/.project
+**/.metadata

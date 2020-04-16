@@ -1,0 +1,61 @@
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>io.focuspoints</groupId>
+		<artifactId>focuspoints-bloomreach14</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>focuspoints-bloomreach14-taglib</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>io.focuspoints</groupId>
+			<artifactId>focuspoints-bloomreach14-site</artifactId>
+		</dependency>
+	
+		<dependency>
+			<groupId>io.focuspoints</groupId>
+			<artifactId>focuspoints-client-taglib</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.onehippo.cms7.hst</groupId>
+			<artifactId>hst-content-beans</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.onehippo.cms7.hst</groupId>
+			<artifactId>hst-commons</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.jcr</groupId>
+			<artifactId>jcr</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,205 @@
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>io.focuspoints</groupId>
+	<artifactId>focuspoints-bloomreach</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	
+	<packaging>pom</packaging>
+	
+	<properties>
+		<java.version>1.8</java.version>
+		
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		
+		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+		
+		<focuspoints-client.version>0.0.1-SNAPSHOT</focuspoints-client.version>
+		<commons-lang3.version>3.10</commons-lang3.version>
+		<jsp-api.version>2.3.3</jsp-api.version>
+		<lombok.version>1.18.12</lombok.version>
+		
+		<jacoco-maven-plugin.version>0.8.5</jacoco-maven-plugin.version>
+		<maven-source-plugin.version>3.2.1</maven-source-plugin.version>
+		<maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
+	</properties>
+	
+	<modules>
+		<module>focuspoints-bloomreach-cms</module>
+		<module>focuspoints-bloomreach-site</module>
+		<module>focuspoints-bloomreach14</module>
+		<module>focuspoints-bloomreach13</module>
+		<module>focuspoints-bloomreach12</module>
+	</modules>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.focuspoints</groupId>
+				<artifactId>focuspoints-bloomreach-cms-frontend</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.focuspoints</groupId>
+				<artifactId>focuspoints-bloomreach-cms-repository</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.focuspoints</groupId>
+				<artifactId>focuspoints-bloomreach-site</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.focuspoints</groupId>
+				<artifactId>focuspoints-bloomreach12-site</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.focuspoints</groupId>
+				<artifactId>focuspoints-bloomreach13-site</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.focuspoints</groupId>
+				<artifactId>focuspoints-bloomreach14-site</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>io.focuspoints</groupId>
+				<artifactId>focuspoints-client-taglib</artifactId>
+				<version>${focuspoints-client.version}</version>
+			</dependency>
+		
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>javax.servlet.jsp</groupId>
+				<artifactId>javax.servlet.jsp-api</artifactId>
+				<version>${jsp-api.version}</version>
+				<scope>provided</scope>
+			</dependency>
+		
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+				<scope>provided</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacoco-maven-plugin.version}</version>
+				<configuration>
+					<append>true</append>
+				</configuration>
+				<executions>
+					<execution>
+						<id>agent-for-ut</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>jacoco-site</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>${maven-source-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>${maven-javadoc-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>TFE-General</id>
+			<url>https://nexus.tfe.nl/repository/TFE-General/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+
+		<repository>
+			<id>TFE-Hippo-Enterprise-Proxy</id>
+			<url>https://nexus.tfe.nl/repository/TFE-Hippo-Enterprise-Proxy/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>TFE-General</id>
+			<url>https://nexus.tfe.nl/repository/TFE-General/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</pluginRepository>
+
+		<pluginRepository>
+			<id>TFE-Hippo-Enterprise-Proxy</id>
+			<url>https://nexus.tfe.nl/repository/TFE-Hippo-Enterprise-Proxy/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
+</project>

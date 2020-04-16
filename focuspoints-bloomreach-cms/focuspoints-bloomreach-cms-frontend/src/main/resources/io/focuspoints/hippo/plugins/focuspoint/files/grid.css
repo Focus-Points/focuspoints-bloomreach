@@ -1,0 +1,34 @@
+/* !CONTAINERS */
+/*-----------------------------------------*/
+.focuspoint-container .frame1, .focuspoint-container .frame2, .focuspoint-container .frame3,
+.focuspoint-container .frame4, .focuspoint-container .frame5, .focuspoint-container .frame6,
+.focuspoint-container .frame7, .focuspoint-container .frame8, .focuspoint-container .frame9 {
+    position: absolute;
+    overflow: hidden;
+    border: 5px solid #fff;
+    margin: -5px 0 0 -5px;
+}
+.focuspoint-container .frame1, .focuspoint-container .frame4, .focuspoint-container .frame7 {
+    width: 66.6666667%;
+    left: 0;
+}
+.focuspoint-container .frame2, .focuspoint-container .frame5, .focuspoint-container .frame8 {
+    width: 22.2222222%;
+    left: 66.6666667%;
+}
+.focuspoint-container .frame3, .focuspoint-container .frame6, .focuspoint-container .frame9 {
+    width: 11.1111111%;
+    left: 88.8888889%;
+}
+.focuspoint-container .frame1, .focuspoint-container .frame2, .focuspoint-container .frame3 {
+    height: 66.6666667%;
+    top: 0;
+}
+.focuspoint-container .frame4, .focuspoint-container .frame5, .focuspoint-container .frame6 {
+    height: 22.2222222%;
+    top: 66.6666667%;
+}
+.focuspoint-container .frame7, .focuspoint-container .frame8, .focuspoint-container .frame9 {
+    height: 11.1111111%;
+    top: 88.8888889%;
+}

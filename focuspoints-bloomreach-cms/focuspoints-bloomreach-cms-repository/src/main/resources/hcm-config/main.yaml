@@ -1,0 +1,5 @@
+definitions:
+  namespace:
+    focuspoints:
+      uri: http://www.onehippo.org/focuspoints/nt/1.0
+      cnd: focuspoints.cnd
