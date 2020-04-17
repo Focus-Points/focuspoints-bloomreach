@@ -13,7 +13,7 @@
 
 	<tag>
 		<name>transform</name>
-		<tag-class>nl.tfe.focuspoints.client.taglib.HippoImageTransformationTag</tag-class>
+		<tag-class>io.focuspoints.client.taglib.HippoImageTransformationTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<name>var</name>
@@ -68,7 +68,7 @@
 
 	<tag>
 		<name>resize</name>
-		<tag-class>nl.tfe.focuspoints.client.taglib.HippoImageResizeTag</tag-class>
+		<tag-class>io.focuspoints.client.taglib.HippoImageResizeTag</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
 			<name>var</name>
