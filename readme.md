@@ -32,6 +32,8 @@ Add the following dependency to the Site module
 
 *Note: use the artifactId focuspoints-bloomreach12-taglib or focuspoints-bloomreach13-taglib depending on the major version of the Bloomreach DXP that you are using*
 
+Next open the web.xml file of the site module and add `classpath*:io/focuspoints/**/*.class` to the `hst-beans-annotated-classes` context-param in order to have the focuspoints beans recognized.
+
 # Configuration
 
 In order to start using the FocusPoints client functionality in the website we need to provide it with the correct configuration. There are multiple ways of configuring the plugin.
