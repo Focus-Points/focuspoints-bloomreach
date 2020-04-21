@@ -9,9 +9,9 @@ import org.apache.commons.lang3.math.NumberUtils;
 
 public interface FocusPointImageSet {
 
-	static String TYPE_NAME = "tfe:focuspointimageset";
+	static String TYPE_NAME = "focuspoints:focuspointimageset";
 
-	static String FIELD_FOCUS_POINT = "tfe:focuspoint";
+	static String FIELD_FOCUS_POINT = "focuspoints:focuspoint";
 
 	static String FOCUS_POINT_SEPARATOR = ",";
 
