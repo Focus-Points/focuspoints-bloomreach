@@ -9,8 +9,6 @@ Add the following depedency to the CMS module
 	<groupId>io.focuspoints</groupId>
 	<artifactId>focuspoints-bloomreach14-cms</artifactId>
 	<version>1.0.0</version>
-	<type>pom</type>
-	<scope>import</scope>
 </dependency>
 ```
 
