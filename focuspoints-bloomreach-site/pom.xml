@@ -13,6 +13,9 @@
 	
 	<artifactId>focuspoints-bloomreach-site</artifactId>
 	
+	<name>FocusPoints BloomReach Site</name>
+	<description>FocusPoints BloomReach Site</description>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.commons</groupId>

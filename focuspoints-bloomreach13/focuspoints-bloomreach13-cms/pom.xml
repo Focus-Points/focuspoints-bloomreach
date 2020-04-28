@@ -12,7 +12,10 @@
 	</parent>
 	
 	<artifactId>focuspoints-bloomreach13-cms</artifactId>
-
+	
+	<name>FocusPoints BloomReach 13 CMS</name>
+	<description>FocusPoints BloomReach 13 CMS</description>
+	
 	<dependencies>
 		<dependency>
 			<groupId>io.focuspoints</groupId>

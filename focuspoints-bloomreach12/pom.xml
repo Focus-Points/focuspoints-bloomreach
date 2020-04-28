@@ -13,6 +13,9 @@
 	
 	<artifactId>focuspoints-bloomreach12</artifactId>
 	
+	<name>FocusPoints BloomReach 12</name>
+	<description>FocusPoints BloomReach 12</description>
+	
 	<packaging>pom</packaging>
 
 	<properties>

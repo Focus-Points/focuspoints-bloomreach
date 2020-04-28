@@ -13,6 +13,9 @@
 	
 	<artifactId>focuspoints-bloomreach13-site</artifactId>
 	
+	<name>FocusPoints BloomReach 13 Site</name>
+	<description>FocusPoints BloomReach 13 Site</description>
+	
 	<dependencies>
 		<dependency>
 			<groupId>io.focuspoints</groupId>

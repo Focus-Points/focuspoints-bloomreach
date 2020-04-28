@@ -12,7 +12,10 @@
 	</parent>
 	
 	<artifactId>focuspoints-bloomreach14-taglib</artifactId>
-
+	
+	<name>FocusPoints BloomReach 14 Taglib</name>
+	<description>FocusPoints BloomReach 14 Taglib</description>
+	
 	<dependencies>
 		<dependency>
 			<groupId>io.focuspoints</groupId>

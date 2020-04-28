@@ -13,6 +13,9 @@
 	
 	<artifactId>focuspoints-bloomreach12-cms</artifactId>
 
+	<name>FocusPoints BloomReach 12 CMS</name>
+	<description>FocusPoints BloomReach 12 CMS</description>
+
 	<dependencies>
 		<dependency>
 			<groupId>io.focuspoints</groupId>

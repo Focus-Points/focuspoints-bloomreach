@@ -13,6 +13,9 @@
 	
 	<artifactId>focuspoints-bloomreach13-taglib</artifactId>
 
+	<name>FocusPoints BloomReach 13 Taglib</name>
+	<description>FocusPoints BloomReach 13 Taglib</description>
+
 	<dependencies>
 		<dependency>
 			<groupId>io.focuspoints</groupId>
