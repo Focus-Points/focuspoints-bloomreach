@@ -1,4 +1,4 @@
-package io.focuspoints.hippo.plugins;
+package io.focuspoints.bloomreach.plugins;
 
 import javax.jcr.Node;
 import javax.jcr.PathNotFoundException;
