@@ -94,9 +94,9 @@ Make sure the following properties are present in your environment configuration
 | focuspoints.token-id     | Your FocusPoints API Key ID              |
 | focuspoints.token-secret | Your FocusPoints API Key Secret          |
 
-# Using the image service tags
+# Using the FocusPoints tags
 
-The image service client comes with a tld with uri `http://www.focuspoints.io/tags/bloomreach`. The tld defines two tags used for image transformation and image resizing.
+The FocusPoints client comes with a tld with uri `http://www.focuspoints.io/tags/bloomreach`. The tld defines two tags used for image transformation and image resizing.
 
 ## The image transformation tag
 
