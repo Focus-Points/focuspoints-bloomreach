@@ -22,7 +22,6 @@ definitions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:path: hippogallery:description
             hipposysedit:type: String
-            hipposysedit:validators: [non-empty, required]
           /thumbnail:
             jcr:primaryType: hipposysedit:field
             hipposysedit:autocreated: true
