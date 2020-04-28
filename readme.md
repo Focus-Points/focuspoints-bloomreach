@@ -66,7 +66,6 @@ This will setup a WebListener at application startup that initializes the FocusP
 
 | Name                     | Description                              |
 |--------------------------|------------------------------------------|
-| focuspoints.url          | The base URL for generating an image URL |
 | focuspoints.token-id     | Your FocusPoints API Key ID              |
 | focuspoints.token-secret | Your FocusPoints API Key Secret          |
 
@@ -92,7 +91,6 @@ Make sure the following properties are present in your environment configuration
 
 | Name                     | Description                              |
 |--------------------------|------------------------------------------|
-| focuspoints.url          | The base URL for generating an image URL |
 | focuspoints.token-id     | Your FocusPoints API Key ID              |
 | focuspoints.token-secret | Your FocusPoints API Key Secret          |
 
