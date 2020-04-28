@@ -41,9 +41,8 @@ During application startup the following classes need to be configured: `ImageSe
 
 ```java
 ImageServiceConfigurationProperties imageServiceConfiguration = new ImageServiceConfigurationProperties();
-imageServiceConfiguration.setUrl("https://image.focuspoints.io");
-imageServiceConfiguration.setUsername("myUsername");
-imageServiceConfiguration.setPassword("myPassword");
+imageServiceConfiguration.setTokenId("myTokenId");
+imageServiceConfiguration.setTokenSecret("myTokenSecret");
 
 new TokenCreator(imageServiceConfiguration);
 new UrlCreator(imageServiceConfiguration);
@@ -65,11 +64,11 @@ Add the following dependency to the Site module
 
 This will setup a WebListener at application startup that initializes the FocusPoints client. Make sure the following context params are present in your application
 
-| Name                 | Description                              |
-|----------------------|------------------------------------------|
-| focuspoints.url      | The base URL for generating an image URL |
-| focuspoints.username | Your FocusPoints API Key ID              |
-| focuspoints.password | Your FocusPoints API Key Secret          |
+| Name                     | Description                              |
+|--------------------------|------------------------------------------|
+| focuspoints.url          | The base URL for generating an image URL |
+| focuspoints.token-id     | Your FocusPoints API Key ID              |
+| focuspoints.token-secret | Your FocusPoints API Key Secret          |
 
 
 ## Spring Configuration
@@ -91,11 +90,11 @@ Add the following import to your Spring configuration
 
 Make sure the following properties are present in your environment configuration
 
-| Name                 | Description                              |
-|----------------------|------------------------------------------|
-| focuspoints.url      | The base URL for generating an image URL |
-| focuspoints.username | Your FocusPoints API Key ID              |
-| focuspoints.password | Your FocusPoints API Key Secret          |
+| Name                     | Description                              |
+|--------------------------|------------------------------------------|
+| focuspoints.url          | The base URL for generating an image URL |
+| focuspoints.token-id     | Your FocusPoints API Key ID              |
+| focuspoints.token-secret | Your FocusPoints API Key Secret          |
 
 # Using the image service tags
 
