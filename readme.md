@@ -107,7 +107,7 @@ The image transformation tag generates a URL containing the correct parameters f
 | image       | false    | The CMS image that is used. The value must of type `HippoGalleryImageSet` but is typically of type `FocusPointImageSet`. Either the **image** or **url** argument is required |
 | url         | false    | An absolute URL of the image that is used. Either the **image** or **url** argument is required |
 | filename    | false    | The filename of the image. When using the **image** argument with a value of type `HippoGalleryImageSet` the filename from the CMS is used. |
-| width       | true     | The desired with of the generated image variant in pixels. Must be a positive `Integer` value |
+| width       | true     | The desired width of the generated image variant in pixels. Must be a positive `Integer` value |
 | height      | true     | The desired height of the generated image variant in pixels. Must be a positive `Integer` value |
 | focusPointX | false    | The focus point coordinate for the x-axis. Must be a `Double` value between -1 and 1. When using the **image** argument with a value of type `FocusPointImageSet` the value set in the CMS is used. |
 | focusPointY | false    | The focus point coordinate for the y-axis. Must be a `Double` value between -1 and 1. When using the **image** argument with a value of type `FocusPointImageSet` the value set in the CMS is used. |
@@ -138,7 +138,7 @@ The image resize tag generates a URL containing the correct parameters for resiz
 | image     | false    | The CMS image that is used. The value must of type `HippoGalleryImageSet`. Either the **image** or **url** argument is required |
 | url       | false    | An absolute URL of the image that is used. Either the **image** or **url** argument is required |
 | filename  | false    | The filename of the image. When using the **image** argument with a value of type `HippoGalleryImageSet` the filename from the CMS is used. |
-| width     | true     | The desired with of the generated image variant in pixels. Must be a positive `Integer` value |
+| width     | true     | The desired width of the generated image variant in pixels. Must be a positive `Integer` value |
 | height    | true     | The desired height of the generated image variant in pixels. Must be a positive `Integer` value |
 | var       | false    | The string to use when binding the result to the page, request, session or application scope. If not specified the result gets outputted to the writer (i.e. typically directly to the JSP) |
 | scope     | false    | The scope to use when exporting the result to a variable. This attribute is only used when **var** is also set. Possible values are **page**, **request**, **session** and **application**. When no value is specified this defaults to the **page** scope |
