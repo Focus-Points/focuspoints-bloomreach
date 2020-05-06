@@ -75,8 +75,8 @@ Add the following dependency to the Site module
 
 ```xml
 <dependency>
-	<groupId>nl.tfe.focuspoints</groupId>
-	<artifactId>tfe-focuspoints-client-core-spring</artifactId>
+	<groupId>io.focuspoints</groupId>
+	<artifactId>io-focuspoints-client-core-spring</artifactId>
 	<version>1.0.0</version>
 </dependency>
 ```
