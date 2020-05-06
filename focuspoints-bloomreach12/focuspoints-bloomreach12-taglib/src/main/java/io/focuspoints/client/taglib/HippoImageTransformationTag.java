@@ -19,7 +19,7 @@ public class HippoImageTransformationTag extends ImageTransformationTag {
 	private HippoGalleryImageSet image;
 
 	@Override
-	public URL getImageUrl() {
+	protected URL getImageUrl() {
 		if (this.getImage() == null) {
 			return super.getImageUrl();
 		}
