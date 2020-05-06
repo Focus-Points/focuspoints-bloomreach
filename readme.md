@@ -76,7 +76,7 @@ Add the following dependency to the Site module
 ```xml
 <dependency>
 	<groupId>io.focuspoints</groupId>
-	<artifactId>io-focuspoints-client-core-spring</artifactId>
+	<artifactId>focuspoints-client-core-spring</artifactId>
 	<version>1.0.0</version>
 </dependency>
 ```
