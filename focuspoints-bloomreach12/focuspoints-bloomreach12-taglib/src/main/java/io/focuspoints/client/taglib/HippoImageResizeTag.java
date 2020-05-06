@@ -17,7 +17,7 @@ public class HippoImageResizeTag extends ImageResizeTag {
 	private HippoGalleryImageSet image;
 
 	@Override
-	public URL getImageUrl() {
+	protected URL getImageUrl() {
 		if (this.getImage() == null) {
 			return super.getImageUrl();
 		}
