@@ -3,15 +3,19 @@ package io.focuspoints.client.taglib;
 import io.focuspoints.beans.gallery.FocusPointImageSet;
 import io.focuspoints.client.taglib.util.HippoUrlUtils;
 import io.mikael.urlbuilder.UrlBuilder;
-import java.net.MalformedURLException;
-import java.net.URL;
-import javax.servlet.jsp.JspException;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.hippoecm.hst.content.beans.standard.HippoGalleryImageSet;
+
+import javax.jcr.RepositoryException;
+import javax.servlet.jsp.JspException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 @Getter
 @Setter
+@Slf4j
 public class HippoImageTransformationTag extends ImageTransformationTag {
 
 	private static final long serialVersionUID = 621238687570992405L;
@@ -19,7 +23,7 @@ public class HippoImageTransformationTag extends ImageTransformationTag {
 	private HippoGalleryImageSet image;
 
 	@Override
-	protected URL getImageUrl() {
+	public URL getImageUrl() {
 		if (this.getImage() == null) {
 			return super.getImageUrl();
 		}
@@ -38,8 +42,12 @@ public class HippoImageTransformationTag extends ImageTransformationTag {
 		if (this.getImage() == null) {
 			return super.getFilename();
 		}
-		return this.getImage().getFileName();
-
+		try {
+			return this.getImage().getNode().getName();
+		} catch (RepositoryException e) {
+			log.error(e.getMessage(), e);
+		}
+		return super.getFilename();
 	}
 
 	@Override
