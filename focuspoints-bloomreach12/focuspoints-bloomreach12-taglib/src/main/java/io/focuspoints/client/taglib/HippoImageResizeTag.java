@@ -3,13 +3,16 @@ package io.focuspoints.client.taglib;
 import io.focuspoints.client.taglib.util.HippoUrlUtils;
 import java.net.MalformedURLException;
 import java.net.URL;
+import javax.jcr.RepositoryException;
 import javax.servlet.jsp.JspException;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.hippoecm.hst.content.beans.standard.HippoGalleryImageSet;
 
 @Getter
 @Setter
+@Slf4j
 public class HippoImageResizeTag extends ImageResizeTag {
 
 	private static final long serialVersionUID = -5455266370469158743L;
@@ -17,7 +20,7 @@ public class HippoImageResizeTag extends ImageResizeTag {
 	private HippoGalleryImageSet image;
 
 	@Override
-	protected URL getImageUrl() {
+	public URL getImageUrl() {
 		if (this.getImage() == null) {
 			return super.getImageUrl();
 		}
@@ -34,8 +37,12 @@ public class HippoImageResizeTag extends ImageResizeTag {
 		if (this.getImage() == null) {
 			return super.getFilename();
 		}
-		return this.getImage().getFileName();
-
+		try {
+			return this.getImage().getNode().getName();
+		} catch (RepositoryException e) {
+			log.error(e.getMessage(), e);
+		}
+		return super.getFilename();
 	}
 
 	@Override
