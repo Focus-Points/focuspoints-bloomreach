@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>io.focuspoints</groupId>
 		<artifactId>focuspoints-bloomreach14</artifactId>
-		<version>1.0.2-SNAPSHOT</version>
+		<version>1.0.2</version>
 	</parent>
 	
 	<artifactId>focuspoints-bloomreach14-cms</artifactId>
