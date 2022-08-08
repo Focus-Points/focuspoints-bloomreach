@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>io.focuspoints</groupId>
+		<artifactId>focuspoints-bloomreach</artifactId>
+		<version>1.1.0-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>focuspoints-bloomreach15</artifactId>
+	
+	<packaging>pom</packaging>
+	
+	<name>FocusPoints BloomReach 15</name>
+	<description>FocusPoints BloomReach 15</description>
+	
+	<properties>
+		<hippo-cms7-release.version>15.1.0</hippo-cms7-release.version>
+	</properties>
+	
+	<modules>
+		<module>focuspoints-bloomreach15-site</module>
+		<module>focuspoints-bloomreach15-cms</module>
+		<module>focuspoints-bloomreach15-taglib</module>
+	</modules>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.onehippo.cms7</groupId>
+				<artifactId>hippo-cms7-release</artifactId>
+				<version>${hippo-cms7-release.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+</project>

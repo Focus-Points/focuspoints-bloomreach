@@ -16,7 +16,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<hippo-cms7-release.version>12.6.8</hippo-cms7-release.version>
+		<hippo-cms7-release.version>12.6.26</hippo-cms7-release.version>
 	</properties>
 	
 	<modules>
