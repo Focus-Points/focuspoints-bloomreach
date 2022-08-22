@@ -1,5 +1,9 @@
 # Installation
 
+## Java versions
+
+Since Bloomreach 15, Java 11 is required. If you are still using Bloomreach 12, 13 of 14, you need focuspoint-bloomreach version 1.x.x
+
 ## Bloomreach CMS Integration
 
 Add the following depedency to the CMS module
@@ -7,8 +11,8 @@ Add the following depedency to the CMS module
 ```xml
 <dependency>
 	<groupId>io.focuspoints</groupId>
-	<artifactId>focuspoints-bloomreach14-cms</artifactId>
-	<version>1.0.1</version>
+	<artifactId>focuspoints-bloomreach15-cms</artifactId>
+	<version>2.0.0</version>
 </dependency>
 ```
 
@@ -23,7 +27,7 @@ Add the following dependency to the Site module
 ```xml
 <dependency>
 	<groupId>io.focuspoints</groupId>
-	<artifactId>focuspoints-bloomreach14-taglib</artifactId>
+	<artifactId>focuspoints-bloomreach15-taglib</artifactId>
 	<version>1.0.1</version>
 </dependency>
 ```
