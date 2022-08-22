@@ -16,7 +16,7 @@
 	<description>FocusPoints BloomReach 14</description>
 	
 	<properties>
-		<hippo-cms7-release.version>14.0.0</hippo-cms7-release.version>
+		<hippo-cms7-release.version>14.7.8</hippo-cms7-release.version>
 	</properties>
 	
 	<modules>
