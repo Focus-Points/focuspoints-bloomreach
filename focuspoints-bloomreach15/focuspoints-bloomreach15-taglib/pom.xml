@@ -4,8 +4,8 @@
 	
 	<parent>
 		<groupId>io.focuspoints</groupId>
-		<artifactId>focuspoints-bloomreach14</artifactId>
-		<version>1.1.0-SNAPSHOT</version>
+		<artifactId>focuspoints-bloomreach15</artifactId>
+		<version>2.0.0-SNAPSHOT</version>
 	</parent>
 	
 	<artifactId>focuspoints-bloomreach15-taglib</artifactId>
@@ -16,7 +16,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>io.focuspoints</groupId>
-			<artifactId>focuspoints-bloomreach14-site</artifactId>
+			<artifactId>focuspoints-bloomreach15-site</artifactId>
 		</dependency>
 	
 		<dependency>
