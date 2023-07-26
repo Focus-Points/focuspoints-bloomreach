@@ -1,6 +1,0 @@
-definitions:
-  config:
-    /hippo:namespaces/focuspoints:
-      jcr:primaryType: hipposysedit:namespace
-      jcr:mixinTypes: ['mix:referenceable']
-      jcr:uuid: 6661f6cb-a665-4f95-99dd-48f85f8be712
