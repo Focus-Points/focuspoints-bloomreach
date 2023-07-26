@@ -12,13 +12,13 @@ Add the following depedency to the CMS module
 <dependency>
 	<groupId>io.focuspoints</groupId>
 	<artifactId>focuspoints-bloomreach15-cms</artifactId>
-	<version>2.0.0</version>
+	<version>2.x.x</version>
 </dependency>
 ```
 
 *Note: use the artifactId focuspoints-bloomreach12-cms or focuspoints-bloomreach13-cms depending on the major version of the Bloomreach DXP that you are using*
 
-Restart the using the `-Drepo.bootstrap=true` or `-Drepo.bootstrap=full` command line argument in order to install the FocusPoints plugin. After restart a new Updater Editor with the name **UpdateGalleryToFocusPoint** should be present in the CMS. Run this editor in order to activate focus point selection support for new and existing images.
+Restart the project using the `-Drepo.bootstrap=true` or `-Drepo.bootstrap=full` command line argument in order to install the FocusPoints plugin. After restart a new Updater Editor with the name **UpdateGalleryToFocusPoint** should be present in the CMS. Run this editor in order to activate focus point selection support for new and existing images.
 
 ## Bloomreach Site integration
 
@@ -28,7 +28,7 @@ Add the following dependency to the Site module
 <dependency>
 	<groupId>io.focuspoints</groupId>
 	<artifactId>focuspoints-bloomreach15-taglib</artifactId>
-	<version>1.0.1</version>
+	<version>2.x.x</version>
 </dependency>
 ```
 
@@ -62,7 +62,7 @@ Add the following dependency to the Site module
 <dependency>
 	<groupId>io.focuspoints</groupId>
 	<artifactId>focuspoints-client-core-servlet</artifactId>
-	<version>1.0.1</version>
+	<version>1.x.x</version>
 </dependency>
 ```
 
@@ -81,7 +81,7 @@ Add the following dependency to the Site module
 <dependency>
 	<groupId>io.focuspoints</groupId>
 	<artifactId>focuspoints-client-core-spring</artifactId>
-	<version>1.0.1</version>
+	<version>1.x.x</version>
 </dependency>
 ```
 

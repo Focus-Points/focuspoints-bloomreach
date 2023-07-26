@@ -1,19 +1,14 @@
 package io.focuspoints.beans.gallery;
 
-import java.io.Serializable;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
+import java.io.Serializable;
 
 public interface FocusPointImageSet {
 
-	static String TYPE_NAME = "focuspoints:focuspointimageset";
-
-	static String FIELD_FOCUS_POINT = "focuspoints:focuspoint";
-
-	static String FOCUS_POINT_SEPARATOR = ",";
+	String FOCUS_POINT_SEPARATOR = ",";
 
 	String getFocusPoint();
 
@@ -41,11 +36,39 @@ public interface FocusPointImageSet {
 	
 	@Data
 	@NoArgsConstructor
-	@AllArgsConstructor
-	public static class Coordinate implements Serializable {
+	class Coordinate implements Serializable {
 		private static final long serialVersionUID = -7205776104564337861L;
 
 		private Double x;
 		private Double y;
+
+		public Coordinate(Double x, Double y) {
+			setX(x);
+			setY(y);
+		}
+
+		public void setX(Double x) {
+			// dit is nodig omdat de taglib anders een IllegalArgumentException
+			// gooit wanneer er een waarde hoger dan 1 of kleiner dan -1 wordt ingevoerd.
+			if (x < -1) {
+				this.x = -1.0;
+			} else if (x > 1) {
+				this.x = 1.0;
+			} else {
+				this.x = x;
+			}
+		}
+
+		public void setY(Double y) {
+			// dit is nodig omdat de taglib anders een IllegalArgumentException
+			// gooit wanneer er een waarde hoger dan 1 of kleiner dan -1 wordt ingevoerd.
+			if (y < -1) {
+				this.y = -1.0;
+			} else if (y > 1) {
+				this.y = 1.0;
+			} else {
+				this.y = y;
+			}
+		}
 	}
 }
