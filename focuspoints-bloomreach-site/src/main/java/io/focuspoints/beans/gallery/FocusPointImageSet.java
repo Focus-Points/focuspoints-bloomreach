@@ -8,8 +8,6 @@ import java.io.Serializable;
 
 public interface FocusPointImageSet {
 
-	String TYPE_NAME = "focuspoints:focuspointimageset";
-	String FIELD_FOCUS_POINT = "focuspoints:focuspoint";
 	String FOCUS_POINT_SEPARATOR = ",";
 
 	String getFocusPoint();
@@ -50,6 +48,8 @@ public interface FocusPointImageSet {
 		}
 
 		public void setX(Double x) {
+			// dit is nodig omdat de taglib anders een IllegalArgumentException
+			// gooit wanneer er een waarde hoger dan 1 of kleiner dan -1 wordt ingevoerd.
 			if (x < -1) {
 				this.x = -1.0;
 			} else if (x > 1) {
