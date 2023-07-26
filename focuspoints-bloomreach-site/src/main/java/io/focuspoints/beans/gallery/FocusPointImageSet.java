@@ -60,6 +60,8 @@ public interface FocusPointImageSet {
 		}
 
 		public void setY(Double y) {
+			// dit is nodig omdat de taglib anders een IllegalArgumentException
+			// gooit wanneer er een waarde hoger dan 1 of kleiner dan -1 wordt ingevoerd.
 			if (y < -1) {
 				this.y = -1.0;
 			} else if (y > 1) {
