@@ -1,11 +1,10 @@
 package io.focuspoints.beans.gallery;
 
-import java.io.Serializable;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
+import java.io.Serializable;
 
 public interface FocusPointImageSet {
 
