@@ -9,11 +9,9 @@ import org.apache.commons.lang3.math.NumberUtils;
 
 public interface FocusPointImageSet {
 
-	static String TYPE_NAME = "focuspoints:focuspointimageset";
-
-	static String FIELD_FOCUS_POINT = "focuspoints:focuspoint";
-
-	static String FOCUS_POINT_SEPARATOR = ",";
+	String TYPE_NAME = "focuspoints:focuspointimageset";
+	String FIELD_FOCUS_POINT = "focuspoints:focuspoint";
+	String FOCUS_POINT_SEPARATOR = ",";
 
 	String getFocusPoint();
 
@@ -41,11 +39,35 @@ public interface FocusPointImageSet {
 	
 	@Data
 	@NoArgsConstructor
-	@AllArgsConstructor
-	public static class Coordinate implements Serializable {
+	class Coordinate implements Serializable {
 		private static final long serialVersionUID = -7205776104564337861L;
 
 		private Double x;
 		private Double y;
+
+		public Coordinate(Double x, Double y) {
+			setX(x);
+			setY(y);
+		}
+
+		public void setX(Double x) {
+			if (x < -1) {
+				this.x = -1.0;
+			} else if (x > 1) {
+				this.x = 1.0;
+			} else {
+				this.x = x;
+			}
+		}
+
+		public void setY(Double y) {
+			if (y < -1) {
+				this.y = -1.0;
+			} else if (y > 1) {
+				this.y = 1.0;
+			} else {
+				this.y = y;
+			}
+		}
 	}
 }

@@ -62,7 +62,7 @@ Add the following dependency to the Site module
 <dependency>
 	<groupId>io.focuspoints</groupId>
 	<artifactId>focuspoints-client-core-servlet</artifactId>
-	<version>2.0.0</version>
+	<version>1.0.1</version>
 </dependency>
 ```
 
@@ -81,7 +81,7 @@ Add the following dependency to the Site module
 <dependency>
 	<groupId>io.focuspoints</groupId>
 	<artifactId>focuspoints-client-core-spring</artifactId>
-	<version>2.0.0</version>
+	<version>1.0.1</version>
 </dependency>
 ```
 
