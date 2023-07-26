@@ -12,7 +12,7 @@ Add the following depedency to the CMS module
 <dependency>
 	<groupId>io.focuspoints</groupId>
 	<artifactId>focuspoints-bloomreach15-cms</artifactId>
-	<version>2.0.1</version>
+	<version>2.x.x</version>
 </dependency>
 ```
 
@@ -28,7 +28,7 @@ Add the following dependency to the Site module
 <dependency>
 	<groupId>io.focuspoints</groupId>
 	<artifactId>focuspoints-bloomreach15-taglib</artifactId>
-	<version>2.0.1</version>
+	<version>2.x.x</version>
 </dependency>
 ```
 
@@ -62,7 +62,7 @@ Add the following dependency to the Site module
 <dependency>
 	<groupId>io.focuspoints</groupId>
 	<artifactId>focuspoints-client-core-servlet</artifactId>
-	<version>1.0.1</version>
+	<version>1.x.x</version>
 </dependency>
 ```
 
@@ -81,7 +81,7 @@ Add the following dependency to the Site module
 <dependency>
 	<groupId>io.focuspoints</groupId>
 	<artifactId>focuspoints-client-core-spring</artifactId>
-	<version>1.0.1</version>
+	<version>1.x.x</version>
 </dependency>
 ```
 
