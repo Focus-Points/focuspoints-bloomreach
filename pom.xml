@@ -57,7 +57,7 @@
 		<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
 		<nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
 
-		<dependency-check-maven.version>7.4.4</dependency-check-maven.version> <!--heeft ook een nieuwe major: 8.1.2-->
+		<dependency-check-maven.version>8.1.2</dependency-check-maven.version>
 		<versions-maven-plugin.version>2.15.0</versions-maven-plugin.version>
 		<oga-maven-plugin.version>1.8.0</oga-maven-plugin.version>
 	</properties>
