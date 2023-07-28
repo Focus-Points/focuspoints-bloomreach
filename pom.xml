@@ -1,337 +1,341 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	
-	<modelVersion>4.0.0</modelVersion>
-	
-	<groupId>io.focuspoints</groupId>
-	<artifactId>focuspoints-bloomreach</artifactId>
-	<version>2.0.1-SNAPSHOT</version>
-	
-	<packaging>pom</packaging>
-	
-	<name>FocusPoints BloomReach</name>
-	<description>FocusPoints BloomReach</description>
-	<url>https://focuspoints.io/</url>
-	
-	<licenses>
-		<license>
-			<name>GNU Lesser General Public License version 3</name>
-			<url>https://opensource.org/licenses/lgpl-3.0.html</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-	
-	<scm>
-		<connection>scm:git:git://github.com/Focus-Points/focuspoints-bloomreach.git</connection>
-		<developerConnection>scm:git:git@github.com:Focus-Points/focuspoints-bloomreach.git</developerConnection>
-		<url>https://github.com/Focus-Points/focuspoints-bloomreach</url>
-		<tag>HEAD</tag>
-	</scm>
-	
-	<developers>
-		<developer>
-			<name>René Kamp</name>
-			<email>development@focuspoints.io</email>
-			<organization>theFactor.e</organization>
-			<organizationUrl>https://tfe.nl/</organizationUrl>
-		</developer>
-	</developers>
-	
-	<properties>
-		<java.version>11</java.version>
-		
-		<maven.compiler.source>${java.version}</maven.compiler.source>
-		<maven.compiler.target>${java.version}</maven.compiler.target>
-		
-		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-		
-		<focuspoints-client.version>1.0.1</focuspoints-client.version>
-		<commons-lang3.version>3.12.0</commons-lang3.version>
-		<jsp-api.version>2.3.3</jsp-api.version>
-		<lombok.version>1.18.24</lombok.version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-		<jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
-		<maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
-		<maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-		<maven-javadoc-plugin.version>3.4.0</maven-javadoc-plugin.version>
-		<maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
-		<nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
+    <modelVersion>4.0.0</modelVersion>
 
-		<dependency-check-maven.version>7.1.1</dependency-check-maven.version>
-		<versions-maven-plugin.version>2.11.0</versions-maven-plugin.version>
-		<oga-maven-plugin.version>1.7.0</oga-maven-plugin.version>
-	</properties>
-	
-	<modules>
-		<module>focuspoints-bloomreach-cms</module>
-		<module>focuspoints-bloomreach-site</module>
-		<module>focuspoints-bloomreach15</module>
-	</modules>
-	
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>io.focuspoints</groupId>
-				<artifactId>focuspoints-bloomreach-cms-frontend</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>io.focuspoints</groupId>
-				<artifactId>focuspoints-bloomreach-cms-repository</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>io.focuspoints</groupId>
-				<artifactId>focuspoints-bloomreach-site</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>io.focuspoints</groupId>
-				<artifactId>focuspoints-bloomreach15-site</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>io.focuspoints</groupId>
-				<artifactId>focuspoints-client-taglib</artifactId>
-				<version>${focuspoints-client.version}</version>
-			</dependency>
-		
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-lang3</artifactId>
-				<version>${commons-lang3.version}</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>javax.servlet.jsp</groupId>
-				<artifactId>javax.servlet.jsp-api</artifactId>
-				<version>${jsp-api.version}</version>
-				<scope>provided</scope>
-			</dependency>
-		
-			<dependency>
-				<groupId>org.projectlombok</groupId>
-				<artifactId>lombok</artifactId>
-				<version>${lombok.version}</version>
-				<scope>provided</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>${jacoco-maven-plugin.version}</version>
-				<configuration>
-					<append>true</append>
-				</configuration>
-				<executions>
-					<execution>
-						<id>agent-for-ut</id>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>jacoco-site</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			
-			<plugin>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>${maven-surefire-plugin.version}</version>
-			</plugin>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>${maven-source-plugin.version}</version>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>${maven-javadoc-plugin.version}</version>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+    <groupId>io.focuspoints</groupId>
+    <artifactId>focuspoints-bloomreach</artifactId>
+    <version>2.0.1-SNAPSHOT</version>
 
-	<profiles>
-		<profile>
-			<id>release</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>${maven-gpg-plugin.version}</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					
-					<plugin>
-						<groupId>org.sonatype.plugins</groupId>
-						<artifactId>nexus-staging-maven-plugin</artifactId>
-						<version>${nexus-staging-maven-plugin.version}</version>
-						<extensions>true</extensions>
-						<configuration>
-							<serverId>ossrh</serverId>
-							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
+    <packaging>pom</packaging>
 
-		<!-- dependency update reports -->
-		<profile>
-			<id>create-dependency-security-report</id>
-			<properties>
-				<dependency.check.report.dir>${project.build.directory}</dependency.check.report.dir>
-				<sonar.dependencyCheck.reportPath>${dependency.check.report.dir}/dependency-check-report.xml
-				</sonar.dependencyCheck.reportPath>
-				<sonar.dependencyCheck.htmlReportPath>${dependency.check.report.dir}/dependency-check-report.html
-				</sonar.dependencyCheck.htmlReportPath>
-			</properties>
-			<activation>
-				<property>
-					<name>dependency-check:aggregate</name>
-				</property>
-			</activation>
+    <name>FocusPoints BloomReach</name>
+    <description>FocusPoints BloomReach</description>
+    <url>https://focuspoints.io/</url>
 
-			<!-- this will create a separate report in the target folder of all modules -->
-			<modules>
-				<module>focuspoints-bloomreach15</module>
-				<module>focuspoints-bloomreach-cms</module>
-				<module>focuspoints-bloomreach-site</module>
-			</modules>
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License version 3</name>
+            <url>https://opensource.org/licenses/lgpl-3.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.owasp</groupId>
-						<artifactId>dependency-check-maven</artifactId>
-						<version>${dependency-check-maven.version}</version>
-						<configuration>
-							<format>ALL</format>
-							<outputDirectory>${dependency.check.report.dir}</outputDirectory>
-							<failOnError>false</failOnError>
-						</configuration>
-						<executions>
-							<execution>
-								<goals>
-									<goal>check</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>create-dependency-updates-report</id>
-			<modules>
-				<module>focuspoints-bloomreach15</module>
-				<module>focuspoints-bloomreach-cms</module>
-				<module>focuspoints-bloomreach-site</module>
-			</modules>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>versions-maven-plugin</artifactId>
-						<version>${versions-maven-plugin.version}</version>
-						<executions>
-							<execution>
-								<id>versions-maven-plugin-report</id>
-								<phase>compile</phase>
-								<goals>
-									<goal>dependency-updates-report</goal>
-									<goal>property-updates-report</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>create-old-groupid-report</id>
-			<modules>
-				<module>focuspoints-bloomreach15</module>
-				<module>focuspoints-bloomreach-cms</module>
-				<module>focuspoints-bloomreach-site</module>
-			</modules>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>biz.lermitage.oga</groupId>
-						<artifactId>oga-maven-plugin</artifactId>
-						<version>${oga-maven-plugin.version}</version>
-						<executions>
-							<execution>
-								<phase>compile</phase>
-								<goals>
-									<goal>check</goal>
-								</goals>
-							</execution>
-						</executions>
-						<!--                        <configuration>-->
-						<!--                            <ignoreListFile>conf/old-groupId-plugin-ignoreList.json</ignoreListFile>-->
-						<!--                        </configuration>-->
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
-	
-	<repositories>
-		<repository>
-			<id>bloomreach</id>
-			<url>https://maven.onehippo.com/maven2</url>
-		</repository>
-	</repositories>
-	
-	<distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-	</distributionManagement>
+    <scm>
+        <connection>scm:git:git://github.com/Focus-Points/focuspoints-bloomreach.git</connection>
+        <developerConnection>scm:git:git@github.com:Focus-Points/focuspoints-bloomreach.git</developerConnection>
+        <url>https://github.com/Focus-Points/focuspoints-bloomreach</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>René Kamp</name>
+            <email>development@focuspoints.io</email>
+            <organization>theFactor.e</organization>
+            <organizationUrl>https://tfe.nl/</organizationUrl>
+        </developer>
+    </developers>
+
+    <properties>
+        <java.version>11</java.version>
+
+        <!-- Explicitly tell maven which version and encoding to use, without need of the compiler plugin. -->
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+
+        <focuspoints-client.version>1.0.1</focuspoints-client.version>
+        <commons-lang3.version>3.13.0</commons-lang3.version>
+
+        <!-- provided dependencies -->
+        <jsp-api.version>2.3.3</jsp-api.version>
+        <lombok.version>1.18.28</lombok.version>
+
+        <!-- build plugins -->
+        <jacoco-maven-plugin.version>0.8.10</jacoco-maven-plugin.version>
+        <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+        <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>3.5.0</maven-javadoc-plugin.version>
+        <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
+        <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
+
+        <dependency-check-maven.version>8.1.2</dependency-check-maven.version>
+        <versions-maven-plugin.version>2.16.0</versions-maven-plugin.version>
+        <oga-maven-plugin.version>1.8.0</oga-maven-plugin.version>
+    </properties>
+
+    <modules>
+        <module>focuspoints-bloomreach-cms</module>
+        <module>focuspoints-bloomreach-site</module>
+        <module>focuspoints-bloomreach15</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.focuspoints</groupId>
+                <artifactId>focuspoints-bloomreach-cms-frontend</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.focuspoints</groupId>
+                <artifactId>focuspoints-bloomreach-cms-repository</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.focuspoints</groupId>
+                <artifactId>focuspoints-bloomreach-site</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.focuspoints</groupId>
+                <artifactId>focuspoints-bloomreach15-site</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.focuspoints</groupId>
+                <artifactId>focuspoints-client-taglib</artifactId>
+                <version>${focuspoints-client.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>javax.servlet.jsp-api</artifactId>
+                <version>${jsp-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco-maven-plugin.version}</version>
+                <configuration>
+                    <append>true</append>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>agent-for-ut</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>jacoco-site</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${maven-gpg-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>${nexus-staging-maven-plugin.version}</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <!-- dependency update reports -->
+        <profile>
+            <id>create-dependency-security-report</id>
+            <properties>
+                <dependency.check.report.dir>${project.build.directory}</dependency.check.report.dir>
+                <sonar.dependencyCheck.reportPath>${dependency.check.report.dir}/dependency-check-report.xml
+                </sonar.dependencyCheck.reportPath>
+                <sonar.dependencyCheck.htmlReportPath>${dependency.check.report.dir}/dependency-check-report.html
+                </sonar.dependencyCheck.htmlReportPath>
+            </properties>
+            <activation>
+                <property>
+                    <name>dependency-check:aggregate</name>
+                </property>
+            </activation>
+
+            <!-- this will create a separate report in the target folder of all modules -->
+            <modules>
+                <module>focuspoints-bloomreach15</module>
+                <module>focuspoints-bloomreach-cms</module>
+                <module>focuspoints-bloomreach-site</module>
+            </modules>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.owasp</groupId>
+                        <artifactId>dependency-check-maven</artifactId>
+                        <version>${dependency-check-maven.version}</version>
+                        <configuration>
+                            <format>ALL</format>
+                            <outputDirectory>${dependency.check.report.dir}</outputDirectory>
+                            <failOnError>false</failOnError>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>create-dependency-updates-report</id>
+            <modules>
+                <module>focuspoints-bloomreach15</module>
+                <module>focuspoints-bloomreach-cms</module>
+                <module>focuspoints-bloomreach-site</module>
+            </modules>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>versions-maven-plugin</artifactId>
+                        <version>${versions-maven-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>versions-maven-plugin-report</id>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>dependency-updates-report</goal>
+                                    <goal>property-updates-report</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>create-old-groupid-report</id>
+            <modules>
+                <module>focuspoints-bloomreach15</module>
+                <module>focuspoints-bloomreach-cms</module>
+                <module>focuspoints-bloomreach-site</module>
+            </modules>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>biz.lermitage.oga</groupId>
+                        <artifactId>oga-maven-plugin</artifactId>
+                        <version>${oga-maven-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <!--                        <configuration>-->
+                        <!--                            <ignoreListFile>conf/old-groupId-plugin-ignoreList.json</ignoreListFile>-->
+                        <!--                        </configuration>-->
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <repositories>
+        <repository>
+            <id>bloomreach</id>
+            <url>https://maven.onehippo.com/maven2</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
 </project>
