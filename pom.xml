@@ -43,8 +43,8 @@
         <!-- Explicitly tell maven which version and encoding to use, without need of the compiler plugin. -->
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+        <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
 
         <focuspoints-client.version>1.0.1</focuspoints-client.version>
         <commons-lang3.version>3.13.0</commons-lang3.version>
