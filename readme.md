@@ -11,7 +11,7 @@ Add the following depedency to the CMS module
 ```xml
 <dependency>
 	<groupId>io.focuspoints</groupId>
-	<artifactId>focuspoints-bloomreach15-cms</artifactId>
+	<artifactId>focuspoints-bloomreach16-cms</artifactId>
 	<version>2.x.x</version>
 </dependency>
 ```
@@ -27,7 +27,7 @@ Add the following dependency to the Site module
 ```xml
 <dependency>
 	<groupId>io.focuspoints</groupId>
-	<artifactId>focuspoints-bloomreach15-taglib</artifactId>
+	<artifactId>focuspoints-bloomreach16-taglib</artifactId>
 	<version>2.x.x</version>
 </dependency>
 ```

@@ -1,14 +1,16 @@
 package io.focuspoints.client.taglib;
 
 import io.focuspoints.client.taglib.util.HippoUrlUtils;
-import java.net.MalformedURLException;
-import java.net.URL;
-import javax.jcr.RepositoryException;
-import javax.servlet.jsp.JspException;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.hippoecm.hst.content.beans.standard.HippoGalleryImageSet;
+
+import javax.jcr.RepositoryException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 
 @Getter
 @Setter
@@ -46,7 +48,7 @@ public class HippoImageResizeTag extends ImageResizeTag {
 	}
 
 	@Override
-	protected String getValue() throws JspException {
+	protected String getValue() {
 		String value = super.getValue();
 
 		return HippoUrlUtils.makeAbsoluteIfCmsRequest(value);

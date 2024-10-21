@@ -4,14 +4,14 @@
 	
 	<parent>
 		<groupId>io.focuspoints</groupId>
-		<artifactId>focuspoints-bloomreach15</artifactId>
-		<version>2.0.1</version>
+		<artifactId>focuspoints-bloomreach16</artifactId>
+		<version>3.0.0</version>
 	</parent>
 	
-	<artifactId>focuspoints-bloomreach15-cms</artifactId>
+	<artifactId>focuspoints-bloomreach16-cms</artifactId>
 	
-	<name>FocusPoints BloomReach 15 CMS</name>
-	<description>FocusPoints BloomReach 15 CMS</description>
+	<name>FocusPoints BloomReach 16 CMS</name>
+	<description>FocusPoints BloomReach 16 CMS</description>
 	
 	<dependencies>
 		<dependency>

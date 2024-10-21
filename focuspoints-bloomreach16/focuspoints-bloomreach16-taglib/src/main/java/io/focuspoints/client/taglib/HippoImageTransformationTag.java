@@ -5,12 +5,13 @@ import io.focuspoints.client.taglib.util.HippoUrlUtils;
 import io.mikael.urlbuilder.UrlBuilder;
 import java.net.MalformedURLException;
 import java.net.URL;
-import javax.jcr.RepositoryException;
-import javax.servlet.jsp.JspException;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.hippoecm.hst.content.beans.standard.HippoGalleryImageSet;
+
+import javax.jcr.RepositoryException;
 
 @Getter
 @Setter
@@ -97,7 +98,7 @@ public class HippoImageTransformationTag extends ImageTransformationTag {
 	}
 
 	@Override
-	protected String getValue() throws JspException {
+	protected String getValue() {
 		String value = super.getValue();
 
 		return HippoUrlUtils.makeAbsoluteIfCmsRequest(value);

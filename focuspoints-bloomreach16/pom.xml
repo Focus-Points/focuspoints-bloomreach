@@ -5,24 +5,24 @@
 	<parent>
 		<groupId>io.focuspoints</groupId>
 		<artifactId>focuspoints-bloomreach</artifactId>
-		<version>2.0.1</version>
+		<version>3.0.0</version>
 	</parent>
 	
-	<artifactId>focuspoints-bloomreach15</artifactId>
+	<artifactId>focuspoints-bloomreach16</artifactId>
 	
 	<packaging>pom</packaging>
 	
-	<name>FocusPoints BloomReach 15</name>
-	<description>FocusPoints BloomReach 15</description>
+	<name>FocusPoints BloomReach 16</name>
+	<description>FocusPoints BloomReach 16</description>
 	
 	<properties>
-		<hippo-cms7-release.version>15.1.0</hippo-cms7-release.version>
+		<hippo-cms7-release.version>15.2.3</hippo-cms7-release.version>
 	</properties>
 	
 	<modules>
-		<module>focuspoints-bloomreach15-site</module>
-		<module>focuspoints-bloomreach15-cms</module>
-		<module>focuspoints-bloomreach15-taglib</module>
+		<module>focuspoints-bloomreach16-site</module>
+		<module>focuspoints-bloomreach16-cms</module>
+		<module>focuspoints-bloomreach16-taglib</module>
 	</modules>
 	
 	<dependencyManagement>
