@@ -48,7 +48,7 @@
         <focuspoints-client.version>2.0.0</focuspoints-client.version>
         <commons-lang3.version>3.13.0</commons-lang3.version>
 
-        <jsp-api.version>3.0.0</jsp-api.version>
+        <jsp-api.version>4.0.0</jsp-api.version>
         <lombok.version>1.18.30</lombok.version>
 
         <!-- Build plugins -->
