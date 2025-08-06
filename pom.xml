@@ -47,7 +47,7 @@
         <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
 
         <focuspoints-client.version>1.0.1</focuspoints-client.version>
-        <commons-lang3.version>3.13.0</commons-lang3.version>
+        <commons-lang3.version>3.18.0</commons-lang3.version>
 
         <!-- provided dependencies -->
         <jsp-api.version>2.3.3</jsp-api.version>
