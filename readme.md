@@ -1,3 +1,5 @@
+Note: this project is no longer under active maintenance. No new updates will be released.
+
 # Installation
 
 ## Java versions
@@ -183,4 +185,5 @@ When using FocusPoints the domain your images are services from will be `images.
 <Location "/images/">
 	ProxyPass "https://images.focuspoints.io"
 </Location>
+
 ```
